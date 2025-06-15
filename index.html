@@ -15,9 +15,10 @@
     }
     body { margin: 0; font-family: sans-serif; background: var(--bg-light); color: var(--text-dark); }
     header {
-      background: url('logo_Bro_7.png') no-repeat center center;
-      background-size: cover;
-      color: var(--text-light);
+      background: url('Twinmix Logo Sora.png') no-repeat center center;
+      background-size: contain;
+      background-color: #ffffff;
+      color: var(--text-dark);
       text-align: center;
       padding: 6rem 2rem 4rem;
       position: relative;
@@ -26,20 +27,21 @@
     header.scrolled {
       background: url('SPECPOMEL_picture_mini.jpg') no-repeat center center;
       background-size: cover;
+      color: var(--text-light);
     }
     header::after {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+    header.scrolled::after {
+      display: block;
     }
     header .content {
       position: relative;
       z-index: 1;
-    }
-    header img.logo {
-      height: 100px;
-      margin-bottom: 1rem;
     }
     header h1 {
       font-size: 2.5rem;
@@ -54,10 +56,11 @@
       position: absolute;
       top: 10px;
       right: 20px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.2);
       padding: 0.3rem 1rem;
       border-radius: 4px;
       cursor: pointer;
+      color: #fff;
       z-index: 2;
     }
     .button {
@@ -140,13 +143,13 @@
     }
     window.onload = () => {
       switchLang('ua');
-      document.getElementById('lang-switch').onclick = () => {
-        const newLang = document.getElementById('lang-switch').dataset.lang === 'ua' ? 'en' : 'ua';
+      const switcher = document.getElementById('lang-switch');
+      switcher.onclick = () => {
+        const newLang = switcher.dataset.lang === 'ua' ? 'en' : 'ua';
         switchLang(newLang);
-        document.getElementById('lang-switch').dataset.lang = newLang;
-        document.getElementById('lang-switch').textContent = newLang === 'ua' ? 'EN' : 'UA';
+        switcher.dataset.lang = newLang;
+        switcher.textContent = newLang === 'ua' ? 'EN' : 'UA';
       };
-
       window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
         if (window.scrollY > 100) {
@@ -162,7 +165,6 @@
   <div class="lang-switch" id="lang-switch" data-lang="ua">EN</div>
   <header>
     <div class="content">
-      <img src="Twinmix Logo Sora.png" alt="TWINMIX Logo" class="logo" />
       <h1>ТВІНМІКС</h1>
       <p class="lang-ua">Технології якості. Рішення майбутнього.</p>
       <p class="lang-en">Technology of quality. Solutions for the future.</p>
@@ -176,12 +178,8 @@
   <section id="about">
     <h2 class="lang-ua">Про компанію</h2>
     <h2 class="lang-en">About the Company</h2>
-    <p class="lang-ua">
-      ТОВ "ТВІНМІКС" — це сучасне виробництво, засноване на принципах інноваційності, відповідального підходу та технологічної гнучкості. Ми спеціалізуємось на виготовленні білкових кормових добавок та спеціалізованого борошна. Кожен процес — від підбору сировини до фасування — контролюється, щоб забезпечити стабільну якість та відповідність міжнародним стандартам.
-    </p>
-    <p class="lang-en">
-      LLC "TWINMIX" is a modern manufacturer based on innovation, responsibility and technological flexibility. We specialize in producing protein feed additives and specialty flour. Every stage — from raw material selection to packaging — is strictly controlled to ensure consistent quality and compliance with international standards.
-    </p>
+    <p class="lang-ua">ТОВ "ТВІНМІКС" — це сучасне виробництво, засноване на принципах інноваційності, відповідального підходу та технологічної гнучкості. Ми спеціалізуємось на виготовленні білкових кормових добавок та спеціалізованого борошна. Кожен процес — від підбору сировини до фасування — контролюється, щоб забезпечити стабільну якість та відповідність міжнародним стандартам.</p>
+    <p class="lang-en">LLC "TWINMIX" is a modern manufacturer based on innovation, responsibility and technological flexibility. We specialize in producing protein feed additives and specialty flour. Every stage — from raw material selection to packaging — is strictly controlled to ensure consistent quality and compliance with international standards.</p>
   </section>
 
   <section id="products">
@@ -209,7 +207,7 @@
   <section id="contact">
     <h2 class="lang-ua">Зв’язатися з нами</h2>
     <h2 class="lang-en">Contact Us</h2>
-    <form class="contact-form" action="https://formspree.io/f/xpzvnvov" method="POST">
+    <form class="contact-form" action="https://formspree.io/f/xyzjjpnr" method="POST">
       <input type="text" name="name" placeholder="Ім’я / Name" required>
       <input type="email" name="email" placeholder="E-mail" required>
       <input type="tel" name="phone" placeholder="Телефон / Phone">
