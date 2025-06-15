@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ТВІНМІКС — український виробник білкових кормових добавок і харчового борошна. Сучасне виробництво, інновації, партнерство." />
+  <title>ТВІНМІКС — Виробництво білкових добавок і борошна</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; }
+    header { background: #002855; color: white; padding: 2rem; text-align: center; }
+    nav { text-align: right; padding: 1rem; background: #eaeaea; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #002855; font-weight: bold; }
+    section { padding: 2rem; }
+    .hero { background: #f7f7f7; padding: 3rem 2rem; text-align: center; }
+    .hero h1 { font-size: 2.5rem; color: #002855; }
+    .hero p { font-size: 1.2rem; margin: 1rem 0; }
+    .button { background: #002855; color: white; padding: 1rem 2rem; border: none; cursor: pointer; font-size: 1rem; }
+    .form-section input, .form-section textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; }
+    .footer { background: #002855; color: white; text-align: center; padding: 2rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">Про нас</a>
+    <a href="#products">Продукція</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+  <header class="hero">
+    <h1>ТВІНМІКС</h1>
+    <p>Технології якості. Рішення майбутнього.</p>
+    <button class="button" onclick="document.getElementById('contact').scrollIntoView()">Зв'язатися з нами</button>
+  </header>
+
+  <section id="about">
+    <h2>Про компанію</h2>
+    <p>ТОВ "ТВІНМІКС" — український виробник, який поєднує високотехнологічні процеси, сучасні підходи до контролю якості та оптимізації логістики. Ми виготовляємо кормові білкові добавки та харчове борошно з локальної сировини, адаптуючи рецептури під потреби B2B-клієнтів та агробізнесу. Наше виробництво побудоване за принципами Lean, з фокусом на ефективність, прозорість і екологічність.</p>
+  </section>
+
+  <section id="products">
+    <h2>Продукція</h2>
+    <ul>
+      <li>Білкові кормові добавки для сільськогосподарських тварин</li>
+      <li>Спеціалізоване харчове борошно (соєве, кукурудзяне, гречане тощо)</li>
+      <li>Мікси на замовлення для B2B-клієнтів</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="form-section">
+    <h2>Зв'язатися з нами</h2>
+    <form action="https://formspree.io/f/mnqeyqvz" method="POST">
+      <input type="text" name="name" placeholder="Ім’я / Name" required />
+      <input type="tel" name="phone" placeholder="Телефон / Phone" />
+      <input type="email" name="email" placeholder="E-mail" required />
+      <textarea name="message" placeholder="Повідомлення / Message" rows="4"></textarea>
+      <button class="button" type="submit">Надіслати</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>ТОВ «ТВІНМІКС» | м. Київ, вул. Нагірна, 25–27, оф. 713</p>
+    <p>📞 +38 (095) 806-60-90 | ✉️ vamtveyev@gmail.com</p>
+    <p>© 2025 TwinMix. Всі права захищено.</p>
+  </footer>
+</body>
+</html>
